@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormRecord, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 
-interface loginForm{
+interface LoginForm {
   email: FormControl,
   password: FormControl
 }
@@ -26,7 +26,7 @@ interface loginForm{
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  loginForm!: FormGroup<loginForm>;
+  loginForm!: FormGroup<LoginForm>;
 
   constructor(
     private router: Router,
@@ -47,6 +47,6 @@ export class LoginComponent {
   }
 
   navigate(){
-    this.router.navigate(["/signup"]);
+    this.router.navigate(["signup"])
   }
 }

@@ -1,5 +1,5 @@
 <app-default-login-layout
-    title="Sing in and start today!"
+    title="Sign in and start today!t"
     primaryBtnText="Signup Now"
     secondaryBtnText="Login Now"
     (submit)="submit()"
@@ -8,39 +8,38 @@
 >
     <form [formGroup]="signupForm">
         <app-primary-input
-        formControlName="name"
-        inputName="name"
-        type="text"
-        label="Your name"
-        placeholder="John Doe"
-    >
-        <img src="/public/email-icon.svg">
-    </app-primary-input>
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="Your name"
+            placeholder="John Doe"
+        >
+            <img src="/assets/svg/email-icon.svg"/>
+        </app-primary-input>
         <app-primary-input
             formControlName="email"
             inputName="email"
             type="email"
             label="Email"
-            placeholder="user@email.com"
+            placeholder="johndoe@gmail.com"
         >
-            <img src="/public/email-icon.svg">
+            <img src="/assets/svg/email-icon.svg"/>
         </app-primary-input>
         <app-primary-input
-            ormControlName="password"
+            formControlName="password"
             inputName="password"
             type="password"
             label="Your Password"
         >
-            <img src="/public/password-icon.svg">
-        </app-primary-input>
-        <app-primary-input
-        ormControlName="passwordConfirm"
+        <img src="/assets/svg/password-icon.svg"/>
+    </app-primary-input>
+    <app-primary-input
+        formControlName="passwordConfirm"
         inputName="passwordConfirm"
         type="password"
         label="Confirm your Password"
     >
-        <img src="/public/password-icon.svg">
+        <img src="/assets/svg/password-icon.svg"/>
     </app-primary-input>
-        <span>Forgot password?</span>
     </form>
 </app-default-login-layout>
